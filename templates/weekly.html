@@ -1,0 +1,69 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Generate indeks prestasi pekanan member</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Mobile Specific Metas
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- FONT
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+    <!-- CSS
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/skeleton.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <script type="text/javascript">
+      function selectText() {
+          var text = document.getElementById('rekap_harian');
+          var selection = window.getSelection();
+          var range = document.createRange();
+          range.selectNodeContents(text);
+          selection.removeAllRanges();
+          selection.addRange(range);
+
+          //ga usah support IE dulu dah
+          // if ($.browser.msie) {
+          //   var range = document.body.createTextRange();
+          //   range.moveToElementText(text);
+          //   range.select();
+          // } else {
+          //   var selection = window.getSelection();
+          //   var range = document.createRange();
+          //   range.selectNodeContents(text);
+          //   selection.removeAllRanges();
+          //   selection.addRange(range);
+          // }
+        }
+    </script>
+  </head>
+
+  <body>
+  <div class="container">
+    <div class="row" style="margin-top: 10px">
+      <h4>Generate indeks prestasi pekanan member</h4>
+    </div>
+    <form method="post">
+      <div class="row">
+        <div class="six columns">
+          <label for="rekap_harian">Rekap terakhir pekan ini</label>
+          <textarea name="rekap_harian" id="rekap_harian">{{data['rekap_pekanan']}}</textarea>
+        </div>
+        <div class="six columns">
+          <label for="template">Template laporan</label>
+          <textarea name="template" id="template">{{data['template']}}</textarea>
+        </div>
+      </div>
+      <div class="row">
+        <input type="submit" class="button-primary" value="Generate">
+        <button id="btnSelect" style="visibility:hidden" onclick="selectText(); return false;">Select All</button>
+      </div>
+    </form>
+  </div>
+  </body>
+</html>
