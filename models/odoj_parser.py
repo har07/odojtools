@@ -46,7 +46,7 @@ def get_member_names(text):
 	#\d : match digit
 	#\w : match alphanumeric or underscore
 	#https://docs.python.org/2/library/re.html
-	JUZ_RE = re.compile(r'(?<=^juz\s\d\d\s).+_\w+', re.I|re.M)
+	JUZ_RE = re.compile(r'(?<=juz\s\d\d\s).+_\w+', re.I|re.M)
 	result = re.findall(JUZ_RE, text)
 	return result
 

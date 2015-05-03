@@ -2,6 +2,7 @@ import unittest
 from datetime import datetime
 import file_utils as utils
 import odoj_parser as ip_gen
+import os
 
 
 
@@ -18,8 +19,8 @@ class TestParser(unittest.TestCase):
 
     def test_get_member_names(self):
         member_names = ip_gen.get_member_names(self.sample_rekap_akhir_pekan)
-        # with open(test_files_dir+os.sep+'rekap_harian_test.txt', 'w') as f:
-        #     for data in result:
+        # with open('test_files'+os.sep+'rekap_harian_result.txt', 'w') as f:
+        #     for data in member_names:
         #         f.write(data + '\r\n')
 
         self.assertEqual(len(member_names), 30) #result sesuai jml member group = 30 orang
