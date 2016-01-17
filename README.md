@@ -1,6 +1,6 @@
 # ODOJ Tools
 
-Tools untuk membuat laporan prestasi harian member grup ODOJ selama sepekan ke belakang
+Tools sederhana untuk membuat laporan prestasi harian member grup ODOJ selama sepekan ke belakang.
  
 Live in Google App Engine (free plan): https://odojtools.appspot.com/
 
