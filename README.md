@@ -1,9 +1,7 @@
 # ODOJ Tools
 
-Aplikasi web untuk memudahkan aktivitas ODOJ
+Tools untuk membuat laporan prestasi harian member grup ODOJ selama sepekan ke belakang
+ 
+Live in Google App Engine (free plan): https://odojtools.appspot.com/
 
-- Generate laporan prestasi harian member grup ODOJ selama sepekan ke belakang
-
-Road map :
-
-- Generate menu tilawah terbaru berdasarkan menu tilawah hari sebelumnya
+No longer maintained since my ODOJ group has switched to using [robodoj](http://odojku.blogspot.co.id/2015/09/tool-buat-odoj-ers-bagian-1-odoj-help.html) recently for automatic *tilawah* progress reporting. Robodoj is an incredible tools. Really help us, ODOJers.
